@@ -41,13 +41,13 @@
       
       <div class="section-head" style="margin-top:50px"><div><span class="section-label">Nocleg</span><h2>Nasza baza wypadowa</h2></div></div>
       <div class="grid grid-1">
-        <article class="card hotel-card" style="display:flex; flex-direction:row; align-items:center; gap:20px;">
-          <div style="flex:1;">
+        <article class="card hotel-card" style="display:flex; flex-direction:row; align-items:center;">
+          <div class="hotel-card-copy" style="flex:1;">
             <span class="section-label">24-27 Lipca · 3 noce</span>
             <h3>Hotel Devman</h3>
             <p>Asmalimescit Cad No 22, Stambuł</p>
             <div class="hotel-links" style="margin-top:20px;">
-              <a href="https://maps.google.com/?q=Hotel+Devman+Istanbul" target="_blank" rel="noopener">Mapa ↗</a>
+              <a href="https://maps.google.com/?q=Hotel+Devman+Istanbul" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:bold;">Pokaż na mapie ↗</a>
             </div>
           </div>
         </article>
