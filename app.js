@@ -184,12 +184,12 @@
       <div id="hiddengems-map" style="height: 500px; width: 100%; border-radius:20px; z-index: 1; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></div>
       <div class="grid grid-2">
         ${data.hiddenGems.map((p, idx) => {
-          const maps = \`https://www.google.com/maps/search/?api=1&query=\${encodeURIComponent(p.q)}\`;
-          return \`<article class="card">
-            <span class="section-label" style="display:block; margin-bottom:5px;">\${idx+1}. \${p.tag}</span>
-            <h3><a href="\${maps}" target="_blank" style="text-decoration:underline; color:inherit;">\${p.n} ↗</a></h3>
-            <p style="font-size: 14px; color: var(--text-muted); margin-top:10px;">\${p.note}</p>
-          </article>\`;
+          const maps = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.q);
+          return '<article class="card">' +
+            '<span class="section-label" style="display:block; margin-bottom:5px;">' + (idx+1) + '. ' + p.tag + '</span>' +
+            '<h3><a href="' + maps + '" target="_blank" style="text-decoration:underline; color:inherit;">' + p.n + ' ↗</a></h3>' +
+            '<p style="font-size: 14px; color: var(--text-muted); margin-top:10px;">' + p.note + '</p>' +
+          '</article>';
         }).join("")}
       </div>
     `;
