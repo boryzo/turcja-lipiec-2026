@@ -79,28 +79,6 @@
           <div class="day-date"><b>${date.split('-')[2]}.${date.split('-')[1]}</b><span>Dzień ${idx + 1}</span></div><span class="day-dot"></span>
           <div class="day-body"><h3>${day.title}</h3><p>${day.details}</p><div class="day-tags"><span class="pill">${day.theme}</span></div></div>
         </article>`).join("")}</div>
-        
-      <div class="section-head" style="margin-top:48px"><div><span class="section-label">Gastronomia (Budżet & Średnia półka)</span><h2>Jedzenie i Restauracje</h2><p>Nasze topowe typy na azjatyckiej stronie (i nie tylko).</p></div></div>
-      <div class="grid grid-2">
-        ${data.foodSpots.map(place => `
-        <article class="card">
-          <span class="section-label" style="display:block; margin-bottom:5px;">${place.location}</span>
-          <h3><a href="${place.url || '#'}" target="_blank" style="text-decoration:underline; color:inherit;">${place.name} ↗</a></h3>
-          <small style="color:var(--accent); font-weight:bold; display:block; margin-bottom:10px;">${place.type}</small>
-          <p style="font-size: 14px; color: var(--text-muted);">${place.description}</p>
-        </article>`).join("")}
-      </div>
-
-      <div class="section-head" style="margin-top:48px"><div><span class="section-label">Życie Nocne</span><h2>Imprezy i Bary</h2><p>Gdzie wyskoczyć wieczorem (lokalnie i bardziej trendy).</p></div></div>
-      <div class="grid grid-2">
-        ${data.partySpots.map(place => `
-        <article class="card">
-          <span class="section-label" style="display:block; margin-bottom:5px;">${place.location}</span>
-          <h3><a href="${place.url || '#'}" target="_blank" style="text-decoration:underline; color:inherit;">${place.name} ↗</a></h3>
-          <small style="color:var(--accent); font-weight:bold; display:block; margin-bottom:10px;">${place.type}</small>
-          <p style="font-size: 14px; color: var(--text-muted);">${place.description}</p>
-        </article>`).join("")}
-      </div>
 
       <div class="section-head" style="margin-top:48px"><div><span class="section-label">Zakupy</span><h2>Bazarowe szaleństwo</h2><p>${data.shopping.generalNote}</p></div></div>
       <div class="grid grid-3">
@@ -195,9 +173,39 @@
     `;
   }
 
+  function renderFood() {
+    document.querySelector("#view-food").innerHTML = `
+      <div class="section-head" style="margin-top:20px;"><div><span class="section-label">Lokalne Smaki</span><h2>Jedzenie i Bary bez zadęcia</h2><p>Lahmacun, pide, köfte, esnaf lokantası, çay i imprezowe klasyki.</p></div></div>
+      <div id="food-map" style="height: 500px; width: 100%; border-radius:20px; z-index: 1; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></div>
+      <div class="grid grid-2">
+        ${data.localFood.map((p, idx) => {
+          return '<article class="card">' +
+            '<span class="section-label" style="display:block; margin-bottom:5px;">' + p.district + ' · ' + p.type + '</span>' +
+            '<h3><a href="' + p.maps + '" target="_blank" style="text-decoration:underline; color:inherit;">' + p.name + ' ↗</a></h3>' +
+            '<p style="font-size: 14px; color: var(--text-muted); margin-top:10px;">' + p.what + '</p>' +
+            '<p style="font-size: 13px; font-weight: bold; margin-top:10px; color: var(--accent);">Zamów: ' + p.order + '</p>' +
+          '</article>';
+        }).join("")}
+      </div>
+
+      <div class="section-head" style="margin-top:48px"><div><span class="section-label">Życie Nocne</span><h2>Imprezy i Bary</h2><p>Gdzie wyskoczyć wieczorem (lokalnie i bardziej trendy).</p></div></div>
+      <div class="grid grid-2">
+        ${data.partySpots.map(place => {
+          return '<article class="card">' +
+            '<span class="section-label" style="display:block; margin-bottom:5px;">' + place.location + '</span>' +
+            '<h3><a href="' + place.url + '" target="_blank" style="text-decoration:underline; color:inherit;">' + place.name + ' ↗</a></h3>' +
+            '<small style="color:var(--accent); font-weight:bold; display:block; margin-bottom:10px;">' + place.type + '</small>' +
+            '<p style="font-size: 14px; color: var(--text-muted);">' + place.description + '</p>' +
+          '</article>';
+        }).join("")}
+      </div>
+    `;
+  }
+
   function initApp() {
     renderOverview();
     renderIstanbul();
+    renderFood();
     renderBudget();
     renderPractical();
     renderHiddenGems();
@@ -215,6 +223,7 @@
     const nav = document.getElementById("main-nav");
 
     let hiddenGemsMap = null;
+    let foodMap = null;
 
     function switchView(viewId) {
       navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === viewId));
@@ -240,6 +249,23 @@
             hiddenGemsMap.fitBounds(bounds, {padding:[25,25]});
           }
           if (hiddenGemsMap) hiddenGemsMap.invalidateSize();
+        }, 100);
+      }
+      
+      if (viewId === 'food') {
+        setTimeout(() => {
+          if (!foodMap && window.L) {
+            foodMap = L.map('food-map').setView([41.017, 28.995], 12);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(foodMap);
+            const bounds = [];
+            data.localFood.forEach(p => {
+              const marker = L.marker([p.lat, p.lon]).addTo(foodMap);
+              marker.bindPopup('<b>' + p.name + '</b><br>' + p.district + '<br><i>' + p.type + '</i><br><br><a href="' + p.maps + '" target="_blank">Google Maps</a>');
+              bounds.push([p.lat, p.lon]);
+            });
+            foodMap.fitBounds(bounds, {padding:[30,30]});
+          }
+          if (foodMap) foodMap.invalidateSize();
         }, 100);
       }
     }
