@@ -178,11 +178,29 @@
     `;
   }
 
+  function renderHiddenGems() {
+    document.querySelector("#view-hiddengems").innerHTML = `
+      <div class="section-head" style="margin-top:20px;"><div><span class="section-label">Eksploracja</span><h2>Stambuł nieoczywisty</h2><p>Warstwa miejsc z klimatem: mury, cysterny, dzielnice, widoki i zaułki poza pierwszym turystycznym obiegiem.</p></div></div>
+      <div id="hiddengems-map" style="height: 500px; width: 100%; border-radius:20px; z-index: 1; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);"></div>
+      <div class="grid grid-2">
+        ${data.hiddenGems.map((p, idx) => {
+          const maps = \`https://www.google.com/maps/search/?api=1&query=\${encodeURIComponent(p.q)}\`;
+          return \`<article class="card">
+            <span class="section-label" style="display:block; margin-bottom:5px;">\${idx+1}. \${p.tag}</span>
+            <h3><a href="\${maps}" target="_blank" style="text-decoration:underline; color:inherit;">\${p.n} ↗</a></h3>
+            <p style="font-size: 14px; color: var(--text-muted); margin-top:10px;">\${p.note}</p>
+          </article>\`;
+        }).join("")}
+      </div>
+    `;
+  }
+
   function initApp() {
     renderOverview();
     renderIstanbul();
     renderBudget();
     renderPractical();
+    renderHiddenGems();
     renderTodo();
     setupNavigation();
     setupModals();
@@ -196,6 +214,8 @@
     const menuBtn = document.querySelector(".menu-button");
     const nav = document.getElementById("main-nav");
 
+    let hiddenGemsMap = null;
+
     function switchView(viewId) {
       navButtons.forEach(btn => btn.classList.toggle("active", btn.dataset.view === viewId));
       views.forEach(view => view.classList.toggle("active", view.id === `view-${viewId}`));
@@ -203,6 +223,24 @@
       if (window.innerWidth <= 768) {
         nav.classList.remove("open");
         menuBtn.setAttribute("aria-expanded", "false");
+      }
+      
+      if (viewId === 'hiddengems') {
+        setTimeout(() => {
+          if (!hiddenGemsMap && window.L) {
+            hiddenGemsMap = L.map('hiddengems-map').setView([41.029, 28.99], 11);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(hiddenGemsMap);
+            const bounds = [];
+            data.hiddenGems.forEach((p, idx) => {
+              const maps = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.q)}`;
+              const marker = L.marker(p.c).addTo(hiddenGemsMap);
+              marker.bindPopup(`<b>${idx+1}. ${p.n}</b><br>${p.tag}<br><a target="_blank" href="${maps}">Google Maps</a>`);
+              bounds.push(p.c);
+            });
+            hiddenGemsMap.fitBounds(bounds, {padding:[25,25]});
+          }
+          if (hiddenGemsMap) hiddenGemsMap.invalidateSize();
+        }, 100);
       }
     }
 

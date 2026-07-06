@@ -146,6 +146,25 @@ window.TRIP_DATA = {
     { name: "Nevizade Sokak", url: "https://maps.app.goo.gl/nevizade", type: "Tureckie Meyhane", description: "Ciasna ulica, stoliki na zewnątrz, dużo Raki i gwarnych rozmów.", location: "Beyoğlu (Europa)" },
     { name: "Karaköy (Okolice Galataport)", url: "https://maps.app.goo.gl/karakoy", type: "Trendy koktajle", description: "Nowoczesne bary i lekko hipsterski klimat nad wodą.", location: "Karaköy (Europa)" }
   ],
+  hiddenGems: [
+    { n: "Fener i Balat – boczne ulice", c: [41.0323, 28.9489], tag: "kolorowe domy / stare dzielnice", note: "Najlepiej iść rano albo przed zachodem; nie tylko słynne schody, ale boczne zaułki.", q: "Fener Balat Istanbul" },
+    { n: "Patriarchat Grecki w Fener", c: [41.0297, 28.9512], tag: "żywa historia", note: "Ciche, ważne miejsce chrześcijańskiego Stambułu; blisko Balatu.", q: "Ecumenical Patriarchate of Constantinople Fener Istanbul" },
+    { n: "Kariye Camii / dawna Chora", c: [41.0317, 28.9394], tag: "mozaiki i freski", note: "Jedno z najmocniejszych miejsc sztuki bizantyjskiej; sprawdź aktualne zasady zwiedzania.", q: "Kariye Camii Chora Istanbul" },
+    { n: "Mury Teodozjusza przy Edirnekapı", c: [41.0323, 28.9348], tag: "miasto-obrona", note: "Tu czuć Konstantynopol bez muzealnej gabloty; świetne połączenie z Kariye.", q: "Theodosian Walls Edirnekapi Istanbul" },
+    { n: "Mihrimah Sultan Camii, Edirnekapı", c: [41.0319, 28.9360], tag: "Sinan / wzgórze", note: "Wysoko przy murach, piękna architektura i mniej ludzi niż w centrum.", q: "Mihrimah Sultan Mosque Edirnekapi Istanbul" },
+    { n: "Yedikule Fortress", c: [40.9931, 28.9235], tag: "twierdza / siedem wież", note: "Mocne, surowe miejsce przy dawnych murach; sprawdź dni otwarcia.", q: "Yedikule Fortress Istanbul" },
+    { n: "Zeyrek Camii / dawny Pantokrator", c: [41.0195, 28.9570], tag: "Bizancjum w ciszy", note: "Mało kto tu trafia, a to jeden z ważnych śladów bizantyjskiego miasta.", q: "Zeyrek Mosque Istanbul" },
+    { n: "Akwedukt Walensa", c: [41.0162, 28.9558], tag: "rzymska skala miasta", note: "Dobry punkt przejścia między Zeyrek i Süleymaniye.", q: "Valens Aqueduct Istanbul" },
+    { n: "Tarasy przy Süleymaniye", c: [41.0163, 28.9637], tag: "widok na Złoty Róg", note: "Nie sam meczet, tylko tarasy i uliczki z widokiem – złota godzina robi robotę.", q: "Suleymaniye Mosque terrace Istanbul" },
+    { n: "Rüstem Paşa Camii", c: [41.0167, 28.9683], tag: "ukryte izniki", note: "Mały, schowany nad sklepikami meczet z fantastycznymi kaflami.", q: "Rustem Pasha Mosque Istanbul" },
+    { n: "Büyük Valide Han", c: [41.0129, 28.9690], tag: "karawanseraj / dachy", note: "Wejdź tylko tam, gdzie jest normalnie dostępne; dachy bywają zamykane.", q: "Buyuk Valide Han Istanbul" },
+    { n: "Şerefiye / Cysterna Teodozjusza", c: [41.0083, 28.9743], tag: "podziemny Stambuł", note: "Mniejsza niż Basilica Cistern, ale bardziej kameralna i bardzo fotogeniczna.", q: "Theodosius Cistern Serefiye Sarnici Istanbul" },
+    { n: "Galata Mevlevihanesi", c: [41.0276, 28.9748], tag: "derwisze / sufizm", note: "Tu lepiej słuchać niż odhaczać; sprawdź, czy jest pokaz sema.", q: "Galata Mevlevi Lodge Museum Istanbul" },
+    { n: "Kuzguncuk", c: [41.0377, 29.0293], tag: "azjatycka wioska w mieście", note: "Kolorowe domy, kawiarnie, Bosfor obok; spokojniejsza alternatywa dla Balatu.", q: "Kuzguncuk Istanbul" },
+    { n: "Salacak – widok na Kız Kulesi", c: [41.0218, 29.0043], tag: "zachód słońca", note: "Przy dobrej pogodzie widok na starą panoramę Stambułu jest bajeczny.", q: "Salacak Sahili Kiz Kulesi Istanbul" },
+    { n: "Çamlıca Tower / wzgórze Çamlıca", c: [41.0318, 29.0698], tag: "panorama 360°", note: "Nowoczesny punkt widokowy; najlepszy przy czystym powietrzu.", q: "Camlica Tower Istanbul" },
+    { n: "Yoros Castle, Anadolu Kavağı", c: [41.1790, 29.0947], tag: "koniec Bosforu", note: "Wyprawa promem; Bosfor zaczyna wyglądać jak cieśnina na końcu świata.", q: "Yoros Castle Anadolu Kavagi Istanbul" }
+  ],
   costMatrix: [
     { label: "Loty (LOT)", amount: 1992, currency: "PLN", type: "fixed", note: "Opłacone (498 zł / os.)" },
     { label: "Hotel Devman", amount: 1367, currency: "PLN", type: "fixed", note: "Opłacone (318 EUR)" },
