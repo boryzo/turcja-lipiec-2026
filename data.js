@@ -60,8 +60,9 @@ window.TRIP_DATA = {
   travelApps: {
     istanbul: [
       { name: "Google Maps", purpose: "Podstawowa nawigacja", priority: "must", url: "https://maps.google.com/" },
+      { name: "Istanbulkart", purpose: "Doładowanie karty miejskiej i trasy metra", priority: "must", url: "https://www.istanbulkart.istanbul/" },
       { name: "Trafi / Moovit", purpose: "Komunikacja miejska w Stambule", priority: "recommended", url: "https://moovitapp.com/" },
-      { name: "BiTaksi / Uber", purpose: "Zamawianie taksówek (często tańsze i bezpieczniejsze niż łapanie na ulicy)", priority: "must", url: "https://www.bitaksi.com/en/" },
+      { name: "BiTaksi / Uber", purpose: "Zamawianie taksówek (używamy awaryjnie)", priority: "optional", url: "https://www.bitaksi.com/en/" },
       { name: "Tricount / Splid", purpose: "Wspólne rozliczenia wydatków na 4 osoby", priority: "must", url: "https://tricount.com/" }
     ]
   },
@@ -78,7 +79,7 @@ window.TRIP_DATA = {
       title: "Przylot i zameldowanie",
       theme: "Aklimatyzacja",
       details: "Wylot z Gdańska po południu, lądowanie w Stambule wieczorem i przejazd do hotelu.",
-      transport: "Taxi / transfer z lotniska IST do Hotel Devman.",
+      transport: "Metro (M11 z lotniska IST) lub autobus Havaist. Omijamy taxi.",
       events: [
         { time: "16:50", type: "transport", text: "Wylot z GDN (LOT LO 2301)" },
         { time: "20:35", type: "transport", text: "Lądowanie w IST" },
@@ -119,7 +120,7 @@ window.TRIP_DATA = {
       title: "Ostatnie chwile i powrót",
       theme: "Pakowanie",
       details: "Wymeldowanie z hotelu, ostatnie zakupy i wylot wieczorem.",
-      transport: "Transfer z hotelu na lotnisko IST ok. 18:00.",
+      transport: "Metro lub Havaist na lotnisko IST ok. 18:00.",
       events: [
         { time: "09:30", type: "meal", text: "Śniadanie", icon: "🥐" },
         { time: "11:30", type: "activity", text: "Wymeldowanie z Hotel Devman", icon: "🚪", highlight: true },
@@ -132,7 +133,7 @@ window.TRIP_DATA = {
   },
   costMatrix: [
     { label: "Loty (LOT)", amount: 1992, currency: "PLN", type: "fixed", note: "Opłacone (498 zł / os.)" },
-    { label: "Hotel Devman", amount: 2000, currency: "PLN", type: "fixed", note: "Robocza kwota za 3 noce (2 pokoje)" },
+    { label: "Hotel Devman", amount: 1367, currency: "PLN", type: "fixed", note: "Opłacone (318 EUR)" },
     { label: "Wyżywienie", amount: 1500, currency: "PLN", type: "variable", note: "Mix budżetowo/średnio" },
     { label: "Atrakcje i Transport", amount: 1200, currency: "PLN", type: "variable", note: "Rejs, bilety, taksówki" },
     { label: "Kieszonkowe / Zakupy", amount: 1308, currency: "PLN", type: "variable", note: "Bazar, pamiątki, przyprawy" }
