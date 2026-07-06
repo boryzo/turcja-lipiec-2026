@@ -108,6 +108,7 @@ window.TRIP_DATA = {
       details: "Dzień zakupów, degustacji i relaksu na wodzie.",
       transport: "Pieszo, promy.",
       events: [
+        { time: "08:30", type: "meal", text: "Śniadanie (Simit): Cihangir Tarihi Simit Fırını (Türkgücü Cd. 59/A)", icon: "🥨", highlight: true },
         { time: "09:30", type: "activity", text: "Kryty Bazar (Kapalı Çarşı) - Zakupy i negocjacje", icon: "🛍️", highlight: true },
         { time: "12:30", type: "activity", text: "Bazar Egipski (Mısır Çarşısı) - Przyprawy i słodycze", icon: "🌶️", highlight: true },
         { time: "14:00", type: "meal", text: "Balık Ekmek (kanapka z rybą) przy moście Galata", icon: "🐟", highlight: true },
