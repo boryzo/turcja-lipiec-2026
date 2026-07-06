@@ -61,7 +61,8 @@ window.TRIP_DATA = {
     istanbul: [
       { name: "Google Maps", purpose: "Podstawowa nawigacja", priority: "must", url: "https://maps.google.com/" },
       { name: "Trafi / Moovit", purpose: "Komunikacja miejska w Stambule", priority: "recommended", url: "https://moovitapp.com/" },
-      { name: "BiTaksi / Uber", purpose: "Zamawianie taksówek (często tańsze i bezpieczniejsze niż łapanie na ulicy)", priority: "must", url: "https://www.bitaksi.com/en/" }
+      { name: "BiTaksi / Uber", purpose: "Zamawianie taksówek (często tańsze i bezpieczniejsze niż łapanie na ulicy)", priority: "must", url: "https://www.bitaksi.com/en/" },
+      { name: "Tricount / Splid", purpose: "Wspólne rozliczenia wydatków na 4 osoby", priority: "must", url: "https://tricount.com/" }
     ]
   },
   shopping: {
@@ -130,10 +131,10 @@ window.TRIP_DATA = {
     }
   },
   costMatrix: [
-    { label: "Loty (LOT)", amount: 3500, currency: "PLN", type: "fixed", note: "Opłacone" },
-    { label: "Hotel Devman", amount: 2000, currency: "PLN", type: "fixed", note: "Opłacone" },
-    { label: "Wyżywienie", amount: 1500, currency: "PLN", type: "variable", note: "4 osoby x 3 dni" },
-    { label: "Atrakcje i Transport lokalny", amount: 500, currency: "PLN", type: "variable", note: "Rejsy, bilety wstępu, tramwaje" },
-    { label: "Kieszonkowe", amount: 500, currency: "PLN", type: "variable", note: "Zakupy na bazarach" }
+    { label: "Loty (LOT)", amount: 1992, currency: "PLN", type: "fixed", note: "Opłacone (498 zł / os.)" },
+    { label: "Hotel Devman", amount: 2000, currency: "PLN", type: "fixed", note: "Robocza kwota za 3 noce (2 pokoje)" },
+    { label: "Wyżywienie", amount: 1500, currency: "PLN", type: "variable", note: "Mix budżetowo/średnio" },
+    { label: "Atrakcje i Transport", amount: 1200, currency: "PLN", type: "variable", note: "Rejs, bilety, taksówki" },
+    { label: "Kieszonkowe / Zakupy", amount: 1308, currency: "PLN", type: "variable", note: "Bazar, pamiątki, przyprawy" }
   ]
 };
