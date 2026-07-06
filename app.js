@@ -21,6 +21,15 @@
 
   function renderOverview() {
     document.querySelector("#view-overview").innerHTML = `
+      <section id="start" class="hero" style="margin-bottom: 40px; border-radius: 20px; overflow: hidden; position: relative;">
+        <div class="hero-art" aria-hidden="true" style="background-image: url('assets/images/istanbul_sunset.jpg'); background-size: cover; background-position: center; filter: brightness(0.7);"></div>
+        <div class="hero-content" style="padding: 40px 20px; position: relative; z-index: 2; color: white;">
+          <p class="eyebrow" style="color: #fca311; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">24 lipca — 27 lipca 2026</p>
+          <h1 style="font-size: 3rem; margin: 10px 0;">Przedłużony weekend.<br><span style="color: #fca311;">Magia Orientu.</span></h1>
+          <p class="hero-lead" style="font-size: 1.2rem; max-width: 600px; margin-bottom: 20px;">Wspólny wyjazd (2 osoby). Loty, noclegi i wszystkie plany w jednym miejscu.</p>
+          <div class="countdown" id="countdown" aria-label="Odliczanie do wyjazdu" style="font-size: 1.5rem; font-family: monospace; font-weight: bold;"></div>
+        </div>
+      </section>
       <div class="section-head"><div><span class="section-label">Plan w skrócie</span><h2>Cała podróż na jednej osi</h2><p>${data.meta.travelers} · 4 dni · 3 noce</p></div></div>
       <div class="grid grid-4">
         <article class="card stat-card"><span class="stat-icon">✈️</span><strong>2 loty</strong><p>Gdańsk ↔ Stambuł LOT</p></article>

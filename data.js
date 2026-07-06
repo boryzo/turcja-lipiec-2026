@@ -3,8 +3,8 @@ window.TRIP_DATA = {
     title: "Turcja - Stambuł 2026",
     start: "2026-07-24T16:50:00+02:00",
     end: "2026-07-27T23:10:00+02:00",
-    travelers: "4 dorosłych (2 pary)",
-    budgetLimit: 8000,
+    travelers: "2 dorosłe osoby",
+    budgetLimit: 4000,
     history: {
       title: "Tło: Magia Stambułu",
       content: "<p>Stambuł to fascynujące miasto położone na dwóch kontynentach – Europie i Azji, rozdzielone Cieśniną Bosfor. To miejsce, gdzie spotykają się różne kultury, religie i tradycje. W jednym momencie słyszysz śpiew muezzina, a w drugim tętniącą życiem ulicę handlową.</p><p>Miasto ma niesamowitą historię – było stolicą trzech wielkich imperiów: Rzymskiego, Bizantyjskiego i Osmańskiego. Dziś to dynamiczna metropolia słynąca z wyśmienitego jedzenia, bazarów pełnych przypraw i niesamowitej gościnności mieszkańców.</p>"
