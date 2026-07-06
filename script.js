@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.card').forEach(card => {
-        card.style.opacity = 0;
-        card.style.transform = 'translateY(50px)';
-        card.style.transition = 'all 0.6s ease-out';
-        observer.observe(card);
+    document.querySelectorAll('.card, .timeline-item').forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(50px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
     });
 });
