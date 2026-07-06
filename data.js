@@ -178,9 +178,9 @@ window.TRIP_DATA = {
   ],
   costMatrix: [
     { label: "Loty (LOT)", amount: 996, currency: "PLN", type: "fixed", note: "Opłacone (498 zł x 2 os.)" },
-    { label: "Hotel Devman", amount: 1367, currency: "PLN", type: "fixed", note: "Opłacone (318 EUR x ~4.3 PLN)" },
-    { label: "Wyżywienie", amount: 800, currency: "PLN", type: "variable", note: "Lokalne jedzenie (ok. 133 zł/os/dzień)" },
-    { label: "Atrakcje i Transport", amount: 500, currency: "PLN", type: "variable", note: "Metro, promy, wstępy" },
-    { label: "Kieszonkowe / Zakupy", amount: 337, currency: "PLN", type: "variable", note: "Bazar, przyprawy, pamiątki" }
+    { label: "Hotel Devman", amount: 684, currency: "PLN", type: "fixed", note: "Opłacone (159 EUR x ~4.3 PLN)" },
+    { label: "Wyżywienie", amount: 1100, currency: "PLN", type: "variable", note: "Lokalne jedzenie (ok. 183 zł/os/dzień)" },
+    { label: "Atrakcje i Transport", amount: 700, currency: "PLN", type: "variable", note: "Metro, promy, wstępy" },
+    { label: "Kieszonkowe / Zakupy", amount: 520, currency: "PLN", type: "variable", note: "Bazar, przyprawy, pamiątki" }
   ]
 };
