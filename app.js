@@ -71,6 +71,28 @@
           <div class="day-body"><h3>${day.title}</h3><p>${day.details}</p><div class="day-tags"><span class="pill">${day.theme}</span></div></div>
         </article>`).join("")}</div>
         
+      <div class="section-head" style="margin-top:48px"><div><span class="section-label">Gastronomia (Budżet & Średnia półka)</span><h2>Jedzenie i Restauracje</h2><p>Nasze topowe typy na azjatyckiej stronie (i nie tylko).</p></div></div>
+      <div class="grid grid-2">
+        ${data.foodSpots.map(place => `
+        <article class="card">
+          <span class="section-label" style="display:block; margin-bottom:5px;">${place.location}</span>
+          <h3>${place.name}</h3>
+          <small style="color:var(--accent); font-weight:bold; display:block; margin-bottom:10px;">${place.type}</small>
+          <p style="font-size: 14px; color: var(--text-muted);">${place.description}</p>
+        </article>`).join("")}
+      </div>
+
+      <div class="section-head" style="margin-top:48px"><div><span class="section-label">Życie Nocne</span><h2>Imprezy i Bary</h2><p>Gdzie wyskoczyć wieczorem (lokalnie i bardziej trendy).</p></div></div>
+      <div class="grid grid-2">
+        ${data.partySpots.map(place => `
+        <article class="card">
+          <span class="section-label" style="display:block; margin-bottom:5px;">${place.location}</span>
+          <h3>${place.name}</h3>
+          <small style="color:var(--accent); font-weight:bold; display:block; margin-bottom:10px;">${place.type}</small>
+          <p style="font-size: 14px; color: var(--text-muted);">${place.description}</p>
+        </article>`).join("")}
+      </div>
+
       <div class="section-head" style="margin-top:48px"><div><span class="section-label">Zakupy</span><h2>Bazarowe szaleństwo</h2><p>${data.shopping.generalNote}</p></div></div>
       <div class="grid grid-3">
         ${data.shopping.items.map(place => `

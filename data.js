@@ -93,11 +93,11 @@ window.TRIP_DATA = {
       details: "Zwiedzanie najważniejszych zabytków Stambułu w dzielnicy Sultanahmet.",
       transport: "Tramwaj T1 z Karaköy / Kabataş do Sultanahmet.",
       events: [
-        { time: "09:00", type: "meal", text: "Tureckie śniadanie (Kahvaltı)", icon: "🍳" },
+        { time: "09:00", type: "meal", text: "Śniadanie (opcjonalnie: dach Seven Hills Restaurant by nakarmić mewy!)", icon: "🐦", highlight: true },
         { time: "10:30", type: "activity", text: "<a href='https://www.guruwalk.com/walks/32639-istanbul-old-city-tour-byzantine-and-ottoman-tales' target='_blank' style='color:inherit; text-decoration:underline;'>Free Walking Tour: Byzantine & Ottoman Tales ↗</a>", icon: "🚶", highlight: true },
-        { time: "13:30", type: "activity", text: "Zakończenie wycieczki (Hagia Sophia, Błękitny Meczet)", icon: "🕌" },
+        { time: "13:30", type: "activity", text: "Zakończenie wycieczki (Hagia Sophia - opcjonalnie wejście do środka)", icon: "🕌" },
         { time: "14:00", type: "meal", text: "Obiad: Tradycyjny Kebab / Köfte", icon: "🥙" },
-        { time: "15:30", type: "activity", text: "Cysterna Bazyliki (Yerebatan Sarnıcı)", icon: "💧", highlight: true },
+        { time: "15:30", type: "activity", text: "Cysterna Bazyliki (Yerebatan Sarnıcı - podziemia z wodą)", icon: "💧", highlight: true },
         { time: "17:00", type: "activity", text: "Spacer po Hipodromie", icon: "🚶" },
         { time: "19:00", type: "meal", text: "Kolacja z widokiem na Bosfor", icon: "🌅" }
       ]
@@ -111,10 +111,12 @@ window.TRIP_DATA = {
         { time: "08:30", type: "meal", text: "Śniadanie (Simit): Cihangir Tarihi Simit Fırını (Türkgücü Cd. 59/A)", icon: "🥨", highlight: true },
         { time: "09:30", type: "activity", text: "Kryty Bazar (Kapalı Çarşı) - Zakupy i negocjacje", icon: "🛍️", highlight: true },
         { time: "12:30", type: "activity", text: "Bazar Egipski (Mısır Çarşısı) - Przyprawy i słodycze", icon: "🌶️", highlight: true },
-        { time: "14:00", type: "meal", text: "Balık Ekmek (kanapka z rybą) przy moście Galata", icon: "🐟", highlight: true },
-        { time: "16:00", type: "activity", text: "Rejs po Bosforze (prom z Eminönü)", icon: "⛴️", highlight: true },
-        { time: "19:00", type: "activity", text: "Wieczorny spacer po İstiklal Caddesi", icon: "🚶" },
-        { time: "20:30", type: "meal", text: "Pożegnalna kolacja (Meze i Raki)", icon: "🥂", highlight: true }
+        { time: "14:00", type: "meal", text: "Balık Ekmek (kanapka z rybą) przy moście Galata / Eminönü", icon: "🐟", highlight: true },
+        { time: "16:00", type: "transport", text: "Prom (Vapur) z Eminönü do Kadıköy (na kartę Istanbulkart)", icon: "⛴️", highlight: true },
+        { time: "16:30", type: "activity", text: "Popołudnie w azjatyckim Kadıköy (dzielnica Moda)", icon: "🚶" },
+        { time: "19:00", type: "meal", text: "Kolacja np. w Çiya Sofrası lub Basta!", icon: "🍽️", highlight: true },
+        { time: "20:30", type: "activity", text: "Imprezowy bar-hopping: Kadife Sokak (Bar Street) w Kadıköy", icon: "🍻", highlight: true },
+        { time: "23:00", type: "transport", text: "Powrót promem nocnym lub dolmuszem do Taksim", icon: "🌙" }
       ]
     },
     "2026-07-27": {
@@ -132,6 +134,18 @@ window.TRIP_DATA = {
       ]
     }
   },
+  foodSpots: [
+    { name: "Çiya Sofrası", type: "Anatolijska tradycja", description: "Kulinarna legenda w Kadıköy z wyjątkowymi potrawami.", location: "Kadıköy (Azja)" },
+    { name: "Basta! Street Food", type: "Gourmet Wrapy", description: "Świetne dürüm z wolno pieczonym mięsem.", location: "Kadıköy (Azja)" },
+    { name: "Reks Kokoreç", type: "Późne gastro", description: "Klasyczny, uliczny kokoreç - idealny po imprezie.", location: "Kadıköy (Azja)" },
+    { name: "Hafiz Mustafa 1864", type: "Słodycze / Desery", description: "Najlepsza baklava, idealna na mały postój w centrum.", location: "Beyoğlu / Sultanahmet" }
+  ],
+  partySpots: [
+    { name: "Kadife Sokak (Bar Street)", type: "Zaułek pubowy", description: "Ulica wypełniona barami obok siebie, super klimat na luzie.", location: "Kadıköy (Azja)" },
+    { name: "Dorock XL", type: "Rock Bar & Koncerty", description: "Ogromny, bardzo popularny pub z muzyką rockową.", location: "Kadıköy (Azja)" },
+    { name: "Nevizade Sokak", type: "Tureckie Meyhane", description: "Ciasna ulica, stoliki na zewnątrz, dużo Raki i gwarnych rozmów.", location: "Beyoğlu (Europa)" },
+    { name: "Karaköy (Okolice Galataport)", type: "Trendy koktajle", description: "Nowoczesne bary i lekko hipsterski klimat nad wodą.", location: "Karaköy (Europa)" }
+  ],
   costMatrix: [
     { label: "Loty (LOT)", amount: 1992, currency: "PLN", type: "fixed", note: "Opłacone (498 zł / os.)" },
     { label: "Hotel Devman", amount: 1367, currency: "PLN", type: "fixed", note: "Opłacone (318 EUR)" },
