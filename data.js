@@ -84,7 +84,7 @@ window.TRIP_DATA = {
         { time: "16:50", type: "transport", text: "Wylot z GDN (LOT LO 2301)" },
         { time: "20:35", type: "transport", text: "Lądowanie w IST" },
         { time: "22:00", type: "activity", text: "Zameldowanie w Hotel Devman (Asmalimescit Cad No 22)", icon: "🏨", highlight: true },
-        { time: "22:30", type: "meal", text: "Kolacja w okolicy hotelu (Beyoğlu / Taksim)", icon: "🍽️" }
+        { time: "22:30", type: "meal", text: "Wieczorne wyjście: Robin of Sherwood bar (Kuloğlu, Sadri Alışık Sk. No:19 D:2A)", icon: "🍻", highlight: true }
       ]
     },
     "2026-07-25": {
@@ -94,8 +94,8 @@ window.TRIP_DATA = {
       transport: "Tramwaj T1 z Karaköy / Kabataş do Sultanahmet.",
       events: [
         { time: "09:00", type: "meal", text: "Tureckie śniadanie (Kahvaltı)", icon: "🍳" },
-        { time: "10:30", type: "activity", text: "Hagia Sophia", icon: "🏛️", highlight: true },
-        { time: "12:30", type: "activity", text: "Błękitny Meczet (Sultanahmet Camii)", icon: "🕌", highlight: true },
+        { time: "10:30", type: "activity", text: "<a href='https://www.guruwalk.com/walks/32639-istanbul-old-city-tour-byzantine-and-ottoman-tales' target='_blank' style='color:inherit; text-decoration:underline;'>Free Walking Tour: Byzantine & Ottoman Tales ↗</a>", icon: "🚶", highlight: true },
+        { time: "13:30", type: "activity", text: "Zakończenie wycieczki (Hagia Sophia, Błękitny Meczet)", icon: "🕌" },
         { time: "14:00", type: "meal", text: "Obiad: Tradycyjny Kebab / Köfte", icon: "🥙" },
         { time: "15:30", type: "activity", text: "Cysterna Bazyliki (Yerebatan Sarnıcı)", icon: "💧", highlight: true },
         { time: "17:00", type: "activity", text: "Spacer po Hipodromie", icon: "🚶" },
