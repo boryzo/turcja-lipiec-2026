@@ -76,7 +76,7 @@
         ${data.foodSpots.map(place => `
         <article class="card">
           <span class="section-label" style="display:block; margin-bottom:5px;">${place.location}</span>
-          <h3>${place.name}</h3>
+          <h3><a href="${place.url || '#'}" target="_blank" style="text-decoration:underline; color:inherit;">${place.name} ↗</a></h3>
           <small style="color:var(--accent); font-weight:bold; display:block; margin-bottom:10px;">${place.type}</small>
           <p style="font-size: 14px; color: var(--text-muted);">${place.description}</p>
         </article>`).join("")}
@@ -87,7 +87,7 @@
         ${data.partySpots.map(place => `
         <article class="card">
           <span class="section-label" style="display:block; margin-bottom:5px;">${place.location}</span>
-          <h3>${place.name}</h3>
+          <h3><a href="${place.url || '#'}" target="_blank" style="text-decoration:underline; color:inherit;">${place.name} ↗</a></h3>
           <small style="color:var(--accent); font-weight:bold; display:block; margin-bottom:10px;">${place.type}</small>
           <p style="font-size: 14px; color: var(--text-muted);">${place.description}</p>
         </article>`).join("")}
@@ -109,7 +109,7 @@
     const usedPercent = Math.min(100, forecastTotal / data.meta.budgetLimit * 100);
     document.querySelector("#view-budget").innerHTML = `
       <article class="card budget-hero">
-        <div class="budget-summary"><span class="section-label">Limit wyjazdu (4 os.)</span><h2>${money.format(data.meta.budgetLimit)}</h2><p>Prognoza obejmuje loty, hotel i wydatki na miejscu (w tym rezerwa na zakupy).</p><div class="budget-meter ${remaining < 0 ? "over" : ""}"><span style="width:${usedPercent}%"></span></div><div class="budget-numbers"><span>Prognoza: ${money.format(forecastTotal)}</span><span>Zapas: ${money.format(remaining)}</span></div></div>
+        <div class="budget-summary"><span class="section-label">Limit wyjazdu (2 os.)</span><h2>${money.format(data.meta.budgetLimit)}</h2><p>Prognoza obejmuje loty, hotel i wydatki na miejscu (w tym rezerwa na zakupy).</p><div class="budget-meter ${remaining < 0 ? "over" : ""}"><span style="width:${usedPercent}%"></span></div><div class="budget-numbers"><span>Prognoza: ${money.format(forecastTotal)}</span><span>Zapas: ${money.format(remaining)}</span></div></div>
         
         <div class="currency-box"><span class="section-label">Kalkulator NBP</span><h3>Przelicz TRY na PLN</h3><p>Kurs średni liry tureckiej pobierany automatycznie.</p>
             <div class="converter"><div class="field"><label for="currency-amount">Kwota</label><input id="currency-amount" type="number" min="0" value="1000" inputmode="decimal"></div><span class="converter-equals">×</span><div class="field"><label for="currency-code">Waluta</label><select id="currency-code"><option value="TRY">TRY · lira turecka</option></select></div></div><div class="converted" id="converted-value">—</div><p class="rate-note" id="rate-note">Pobieram kurs NBP…</p>

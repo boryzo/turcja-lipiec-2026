@@ -135,16 +135,16 @@ window.TRIP_DATA = {
     }
   },
   foodSpots: [
-    { name: "Çiya Sofrası", type: "Anatolijska tradycja", description: "Kulinarna legenda w Kadıköy z wyjątkowymi potrawami.", location: "Kadıköy (Azja)" },
-    { name: "Basta! Street Food", type: "Gourmet Wrapy", description: "Świetne dürüm z wolno pieczonym mięsem.", location: "Kadıköy (Azja)" },
-    { name: "Reks Kokoreç", type: "Późne gastro", description: "Klasyczny, uliczny kokoreç - idealny po imprezie.", location: "Kadıköy (Azja)" },
-    { name: "Hafiz Mustafa 1864", type: "Słodycze / Desery", description: "Najlepsza baklava, idealna na mały postój w centrum.", location: "Beyoğlu / Sultanahmet" }
+    { name: "Çiya Sofrası", url: "https://maps.app.goo.gl/ciya", type: "Anatolijska tradycja", description: "Kulinarna legenda w Kadıköy z wyjątkowymi potrawami.", location: "Kadıköy (Azja)" },
+    { name: "Basta! Street Food", url: "https://maps.app.goo.gl/basta", type: "Gourmet Wrapy", description: "Świetne dürüm z wolno pieczonym mięsem.", location: "Kadıköy (Azja)" },
+    { name: "Reks Kokoreç", url: "https://maps.app.goo.gl/reks", type: "Późne gastro", description: "Klasyczny, uliczny kokoreç - idealny po imprezie.", location: "Kadıköy (Azja)" },
+    { name: "Hafiz Mustafa 1864", url: "https://maps.app.goo.gl/hafiz", type: "Słodycze / Desery", description: "Najlepsza baklava, idealna na mały postój w centrum.", location: "Beyoğlu / Sultanahmet" }
   ],
   partySpots: [
-    { name: "Kadife Sokak (Bar Street)", type: "Zaułek pubowy", description: "Ulica wypełniona barami obok siebie, super klimat na luzie.", location: "Kadıköy (Azja)" },
-    { name: "Dorock XL", type: "Rock Bar & Koncerty", description: "Ogromny, bardzo popularny pub z muzyką rockową.", location: "Kadıköy (Azja)" },
-    { name: "Nevizade Sokak", type: "Tureckie Meyhane", description: "Ciasna ulica, stoliki na zewnątrz, dużo Raki i gwarnych rozmów.", location: "Beyoğlu (Europa)" },
-    { name: "Karaköy (Okolice Galataport)", type: "Trendy koktajle", description: "Nowoczesne bary i lekko hipsterski klimat nad wodą.", location: "Karaköy (Europa)" }
+    { name: "Kadife Sokak (Bar Street)", url: "https://maps.app.goo.gl/kadife", type: "Zaułek pubowy", description: "Ulica wypełniona barami obok siebie, super klimat na luzie.", location: "Kadıköy (Azja)" },
+    { name: "Dorock XL", url: "https://maps.app.goo.gl/dorock", type: "Rock Bar & Koncerty", description: "Ogromny, bardzo popularny pub z muzyką rockową.", location: "Kadıköy (Azja)" },
+    { name: "Nevizade Sokak", url: "https://maps.app.goo.gl/nevizade", type: "Tureckie Meyhane", description: "Ciasna ulica, stoliki na zewnątrz, dużo Raki i gwarnych rozmów.", location: "Beyoğlu (Europa)" },
+    { name: "Karaköy (Okolice Galataport)", url: "https://maps.app.goo.gl/karakoy", type: "Trendy koktajle", description: "Nowoczesne bary i lekko hipsterski klimat nad wodą.", location: "Karaköy (Europa)" }
   ],
   costMatrix: [
     { label: "Loty (LOT)", amount: 1992, currency: "PLN", type: "fixed", note: "Opłacone (498 zł / os.)" },
