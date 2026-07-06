@@ -29,6 +29,12 @@ window.TRIP_DATA = {
     status: "planned",
     note: "Późny przylot, najlepiej zorganizować odbiór z lotniska lub wziąć taksówkę."
   },
+  istTransfer: {
+    route: "Lotnisko IST ↔ Hotel Devman (Şişhane)",
+    recommended: "Metro: M11 + M2 (ok. 50 min)",
+    note: "Z lotniska (IST) bierzemy fioletową linię M11 do stacji końcowej Gayrettepe. Tam przesiadka na zieloną linię M2 w kier. Yenikapı. Wysiadasz na Şişhane (blisko hotelu). Powrót na lotnisko tą samą trasą: M2 do Gayrettepe -> M11 na lotnisko.",
+    alternative: "Autobus Havaist (HVIST-16) do Taksim",
+  },
   travelProtection: [
     { title: "Ubezpieczenie Podróżne", detail: "Sprawdzić oferty z ochroną na wypadek problemów żołądkowych i odwołanego lotu.", icon: "🛡️" },
     { title: "Karta wielowalutowa", detail: "Revolut sprawdza się świetnie, ale warto mieć też trochę gotówki (liry tureckie) na mniejsze bazary.", icon: "💳" }

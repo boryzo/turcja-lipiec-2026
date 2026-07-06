@@ -53,9 +53,12 @@
         </article>
       </div>
       
-      <div class="section-head" style="margin-top:50px"><div><span class="section-label">Ostatni dzień</span><h2>Powrót do domu</h2></div></div>
+      <div class="section-head" style="margin-top:50px"><div><span class="section-label">Logistyka</span><h2>Transfery i Lotnisko</h2></div></div>
       <div class="grid grid-2">
-        <article class="card train-card"><span class="stat-icon">✈️</span><div><span class="section-label">${data.returnTrain.date} · ${data.returnTrain.route}</span><h3>${data.returnTrain.recommended}</h3><p>${data.returnTrain.note}</p><small>Alternatywa: ${data.returnTrain.alternative}</small></div></article>
+        <article class="card train-card"><span class="stat-icon">🚇</span><div><span class="section-label">${data.istTransfer.route}</span><h3>${data.istTransfer.recommended}</h3><p>${data.istTransfer.note}</p><small>Alternatywa: ${data.istTransfer.alternative}</small></div></article>
+        <article class="card train-card"><span class="stat-icon">🚕</span><div><span class="section-label">${data.returnTrain.date} · ${data.returnTrain.route}</span><h3>${data.returnTrain.recommended}</h3><p>${data.returnTrain.note}</p><small>Alternatywa: ${data.returnTrain.alternative}</small></div></article>
+      </div>
+      <div class="grid grid-1" style="margin-top:20px;">
         <article class="card"><span class="section-label">Bezpieczeństwo</span><h3>Ubezpieczenia i Kasa</h3><div class="protection-list">${data.travelProtection.map(item => `<div class="protection-item"><span>${item.icon}</span><div><strong>${item.title}</strong><p>${item.detail}</p></div></div>`).join("")}</div></article>
       </div>`;
   }
