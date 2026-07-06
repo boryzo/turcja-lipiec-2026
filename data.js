@@ -177,10 +177,10 @@ window.TRIP_DATA = {
     { n: "Yoros Castle, Anadolu Kavağı", c: [41.1790, 29.0947], tag: "koniec Bosforu", note: "Wyprawa promem; Bosfor zaczyna wyglądać jak cieśnina na końcu świata.", q: "Yoros Castle Anadolu Kavagi Istanbul" }
   ],
   costMatrix: [
-    { label: "Loty (LOT)", amount: 1992, currency: "PLN", type: "fixed", note: "Opłacone (498 zł / os.)" },
-    { label: "Hotel Devman", amount: 1367, currency: "PLN", type: "fixed", note: "Opłacone (318 EUR)" },
-    { label: "Wyżywienie", amount: 1500, currency: "PLN", type: "variable", note: "Mix budżetowo/średnio" },
-    { label: "Atrakcje i Transport", amount: 1200, currency: "PLN", type: "variable", note: "Rejs, bilety, taksówki" },
-    { label: "Kieszonkowe / Zakupy", amount: 1308, currency: "PLN", type: "variable", note: "Bazar, pamiątki, przyprawy" }
+    { label: "Loty (LOT)", amount: 996, currency: "PLN", type: "fixed", note: "Opłacone (498 zł x 2 os.)" },
+    { label: "Hotel Devman", amount: 1367, currency: "PLN", type: "fixed", note: "Opłacone (318 EUR x ~4.3 PLN)" },
+    { label: "Wyżywienie", amount: 800, currency: "PLN", type: "variable", note: "Lokalne jedzenie (ok. 133 zł/os/dzień)" },
+    { label: "Atrakcje i Transport", amount: 500, currency: "PLN", type: "variable", note: "Metro, promy, wstępy" },
+    { label: "Kieszonkowe / Zakupy", amount: 337, currency: "PLN", type: "variable", note: "Bazar, przyprawy, pamiątki" }
   ]
 };
