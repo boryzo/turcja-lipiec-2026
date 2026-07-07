@@ -138,7 +138,7 @@
           <h3>Mapa Metra i Tramwajów (Metro Istanbul)</h3>
           <p style="font-size: 14px; color: var(--text-muted); margin-top:10px;">Zawsze aktualna, wysoce szczegółowa mapa całej sieci szynowej (w tym dojazd z lotniska IST, Marmaray). Warto pobrać ten PDF na telefon na wypadek braku internetu pod ziemią.</p>
           <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a href="https://www.metro.istanbul/resim/ag-haritalari/istanbul-rayli-sistemler-ag-haritasi.pdf" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:bold;">Pobierz PDF ↗</a>
+            <a href="https://www.metro.istanbul/resim/resimad/Istanbul%20Rayl%C4%B1%20Sistemler%20A%C4%9F%20Haritas%C4%B1%20190626" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:bold;">Pobierz mapę (HQ) ↗</a>
             <a href="https://www.metro.istanbul/yolcu-hizmetleri/ag-haritalari" target="_blank" rel="noopener" style="display:inline-block; padding:8px 16px; background:transparent; border:2px solid var(--accent); color:var(--text); border-radius:8px; text-decoration:none; font-weight:bold;">Strona oficjalna ↗</a>
           </div>
         </article>
