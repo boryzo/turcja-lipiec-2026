@@ -32,7 +32,7 @@ window.TRIP_DATA = {
   istTransfer: {
     route: "Lotnisko IST ↔ Hotel Devman (Şişhane)",
     recommended: "Metro: M11 + M2 (ok. 50 min)",
-    note: "Z lotniska (IST) bierzemy fioletową linię M11 do stacji końcowej Gayrettepe. Tam przesiadka na zieloną linię M2 w kier. Yenikapı. Wysiadasz na Şişhane (blisko hotelu). Powrót na lotnisko tą samą trasą: M2 do Gayrettepe -> M11 na lotnisko.",
+    note: "Z lotniska (IST) bierzemy fioletową linię M11 do stacji końcowej Gayrettepe. Tam czeka Was ok. 10-15 minut spaceru podziemiami na przesiadkę do M2 w kier. Yenikapı. Wysiadasz na Şişhane. Powrót tą samą trasą.",
     alternative: "Autobus Havaist (HVIST-16) do Taksim",
   },
   travelProtection: [
@@ -69,7 +69,7 @@ window.TRIP_DATA = {
       { name: "Istanbulkart", purpose: "Doładowanie karty miejskiej i trasy metra", priority: "must", url: "https://www.istanbulkart.istanbul/" },
       { name: "Trafi / Moovit", purpose: "Komunikacja miejska w Stambule", priority: "recommended", url: "https://moovitapp.com/" },
       { name: "BiTaksi / Uber", purpose: "Zamawianie taksówek (używamy awaryjnie)", priority: "optional", url: "https://www.bitaksi.com/en/" },
-      { name: "Tricount / Splid", purpose: "Wspólne rozliczenia wydatków na 4 osoby", priority: "must", url: "https://tricount.com/" }
+      { name: "Tricount / Splid", purpose: "Wspólne rozliczenia wydatków na 2 osoby", priority: "must", url: "https://tricount.com/" }
     ]
   },
   shopping: {
@@ -94,35 +94,36 @@ window.TRIP_DATA = {
       ]
     },
     "2026-07-25": {
+      title: "Bazary i azjatycki brzeg",
+      theme: "Zakupy i widoki",
+      details: "Dzień zakupów, degustacji i relaksu na wodzie.",
+      transport: "Pieszo, promy.",
+      events: [
+        { time: "08:30", type: "meal", text: "Śniadanie w hotelu + świeży simit na drogę (Cihangir Tarihi Simit Fırını)", icon: "🥨", highlight: true },
+        { time: "09:30", type: "activity", text: "Kryty Bazar (Kapalı Çarşı) - Zakupy i negocjacje (w niedzielę ZAMKNIĘTY!)", icon: "🛍️", highlight: true },
+        { time: "12:30", type: "activity", text: "Bazar Egipski (Mısır Çarşısı) - Przyprawy i słodycze", icon: "🌶️", highlight: true },
+        { time: "13:30", type: "meal", text: "Szybki lunch przed rejsem: Balık Ekmek przy moście w Eminönü", icon: "🐟", highlight: true },
+        { time: "14:35", type: "activity", text: "Oficjalny Krótki Rejs po Bosforze (Şehir Hatları, start Eminönü, ok. 340 TL/os, ~2h)", icon: "🚢", highlight: true },
+        { time: "16:45", type: "transport", text: "Po powrocie z rejsu: prom z Eminönü do azjatyckiego Kadıköy", icon: "⛴️", highlight: true },
+        { time: "17:15", type: "activity", text: "Popołudnie i zachód słońca w Kadıköy (dzielnica Moda)", icon: "🚶" },
+        { time: "19:30", type: "meal", text: "Kolacja np. w Çiya Sofrası lub Basta!", icon: "🍽️", highlight: true },
+        { time: "20:30", type: "activity", text: "Imprezowy bar-hopping: Kadife Sokak (uwaga na drogi alkohol - ok. 20 zł/piwo)", icon: "🍻", highlight: true },
+        { time: "23:00", type: "transport", text: "Powrót promem nocnym lub dolmuszem do Taksim", icon: "🌙" }
+      ]
+    },
+    "2026-07-26": {
       title: "Serce Starego Miasta (Sultanahmet)",
       theme: "Zabytki i historia",
       details: "Zwiedzanie najważniejszych zabytków Stambułu w dzielnicy Sultanahmet.",
       transport: "Tramwaj T1 z Karaköy / Kabataş do Sultanahmet.",
       events: [
         { time: "09:00", type: "meal", text: "Śniadanie w hotelu (opcjonalnie kawa na dachu Seven Hills Restaurant by nakarmić mewy)", icon: "☕", highlight: true },
-        { time: "10:30", type: "activity", text: "<a href='https://www.guruwalk.com/walks/32639-istanbul-old-city-tour-byzantine-and-ottoman-tales' target='_blank' style='color:inherit; text-decoration:underline;'>Free Walking Tour: Byzantine & Ottoman Tales ↗</a>", icon: "🚶", highlight: true },
-        { time: "13:30", type: "activity", text: "Zakończenie wycieczki (Hagia Sophia - opcjonalnie wejście do środka)", icon: "🕌" },
-        { time: "14:00", type: "meal", text: "Obiad: Tradycyjny Kebab / Köfte", icon: "🥙" },
-        { time: "15:30", type: "activity", text: "Cysterna Bazyliki (Yerebatan Sarnıcı - podziemia z wodą)", icon: "💧", highlight: true },
+        { time: "10:30", type: "activity", text: "<a href='https://www.guruwalk.com/walks/32639-istanbul-old-city-tour-byzantine-and-ottoman-tales' target='_blank' style='color:inherit; text-decoration:underline;'>Free Walking Tour: Byzantine & Ottoman Tales ↗</a> (napiwek ok. 10 EUR)", icon: "🚶", highlight: true },
+        { time: "13:30", type: "activity", text: "Zakończenie wycieczki. Hagia Sophia (podziwianie z zewnątrz – wejście to 25 EUR!)", icon: "🕌" },
+        { time: "14:00", type: "meal", text: "Obiad: Tradycyjny Kebab / Köfte w bocznej uliczce", icon: "🥙" },
+        { time: "15:30", type: "activity", text: "Cysterna Bazyliki (Yerebatan Sarnıcı - ok. 35 EUR)", icon: "💧", highlight: true },
         { time: "17:00", type: "activity", text: "Spacer po Hipodromie", icon: "🚶" },
-        { time: "19:00", type: "meal", text: "Kolacja z widokiem na Bosfor", icon: "🌅" }
-      ]
-    },
-    "2026-07-26": {
-      title: "Bazary i rejs po Bosforze",
-      theme: "Zakupy i widoki",
-      details: "Dzień zakupów, degustacji i relaksu na wodzie.",
-      transport: "Pieszo, promy.",
-      events: [
-        { time: "08:30", type: "meal", text: "Śniadanie w hotelu + świeży simit na drogę (Cihangir Tarihi Simit Fırını, Türkgücü Cd. 59/A)", icon: "🥨", highlight: true },
-        { time: "09:30", type: "activity", text: "Kryty Bazar (Kapalı Çarşı) - Zakupy i negocjacje", icon: "🛍️", highlight: true },
-        { time: "12:30", type: "activity", text: "Bazar Egipski (Mısır Çarşısı) - Przyprawy i słodycze", icon: "🌶️", highlight: true },
-        { time: "14:00", type: "meal", text: "Balık Ekmek (kanapka z rybą) przy moście Galata / Eminönü", icon: "🐟", highlight: true },
-        { time: "16:00", type: "transport", text: "Prom (Vapur) z Eminönü do Kadıköy (na kartę Istanbulkart)", icon: "⛴️", highlight: true },
-        { time: "16:30", type: "activity", text: "Popołudnie w azjatyckim Kadıköy (dzielnica Moda)", icon: "🚶" },
-        { time: "19:00", type: "meal", text: "Kolacja np. w Çiya Sofrası lub Basta!", icon: "🍽️", highlight: true },
-        { time: "20:30", type: "activity", text: "Imprezowy bar-hopping: Kadife Sokak (Bar Street) w Kadıköy", icon: "🍻", highlight: true },
-        { time: "23:00", type: "transport", text: "Powrót promem nocnym lub dolmuszem do Taksim", icon: "🌙" }
+        { time: "19:00", type: "meal", text: "Kolacja w tradycyjnej esnaf lokantasi w Fatih (dużo tańsze niż lokale z widokiem na Bosfor)", icon: "🍲" }
       ]
     },
     "2026-07-27": {
@@ -134,7 +135,7 @@ window.TRIP_DATA = {
         { time: "09:30", type: "meal", text: "Ostatnie śniadanie w hotelu", icon: "🥐" },
         { time: "11:30", type: "activity", text: "Wymeldowanie z Hotel Devman", icon: "🚪", highlight: true },
         { time: "12:00", type: "activity", text: "Czas wolny, ew. Wieża Galata", icon: "🗼" },
-        { time: "18:00", type: "transport", text: "Przejazd na lotnisko IST" },
+        { time: "17:30", type: "transport", text: "Przejazd na lotnisko IST (metro w godzinach szczytu!)" },
         { time: "21:25", type: "transport", text: "Wylot ze Stambułu (LOT LO 2302)" },
         { time: "23:10", type: "transport", text: "Przylot do Gdańska" }
       ]
@@ -166,7 +167,7 @@ window.TRIP_DATA = {
   hiddenGems: [
     { n: "Fener i Balat – boczne ulice", c: [41.0323, 28.9489], tag: "kolorowe domy / stare dzielnice", note: "Najlepiej iść rano albo przed zachodem; nie tylko słynne schody, ale boczne zaułki.", q: "Fener Balat Istanbul" },
     { n: "Patriarchat Grecki w Fener", c: [41.0297, 28.9512], tag: "żywa historia", note: "Ciche, ważne miejsce chrześcijańskiego Stambułu; blisko Balatu.", q: "Ecumenical Patriarchate of Constantinople Fener Istanbul" },
-    { n: "Kariye Camii / dawna Chora", c: [41.0317, 28.9394], tag: "mozaiki i freski", note: "Jedno z najmocniejszych miejsc sztuki bizantyjskiej; sprawdź aktualne zasady zwiedzania.", q: "Kariye Camii Chora Istanbul" },
+    { n: "Kariye Camii / dawna Chora", c: [41.0317, 28.9394], tag: "mozaiki i freski", note: "Otwarty ponownie w 2024 jako meczet. Sprawdzajcie aktualne ceny wejściówek turystycznych.", q: "Kariye Camii Chora Istanbul" },
     { n: "Mury Teodozjusza przy Edirnekapı", c: [41.0323, 28.9348], tag: "miasto-obrona", note: "Tu czuć Konstantynopol bez muzealnej gabloty; świetne połączenie z Kariye.", q: "Theodosian Walls Edirnekapi Istanbul" },
     { n: "Mihrimah Sultan Camii, Edirnekapı", c: [41.0319, 28.9360], tag: "Sinan / wzgórze", note: "Wysoko przy murach, piękna architektura i mniej ludzi niż w centrum.", q: "Mihrimah Sultan Mosque Edirnekapi Istanbul" },
     { n: "Yedikule Fortress", c: [40.9931, 28.9235], tag: "twierdza / siedem wież", note: "Mocne, surowe miejsce przy dawnych murach; sprawdź dni otwarcia.", q: "Yedikule Fortress Istanbul" },
