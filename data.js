@@ -4,7 +4,7 @@ window.TRIP_DATA = {
     start: "2026-07-24T16:50:00+02:00",
     end: "2026-07-27T23:10:00+02:00",
     travelers: "2 dorosłe osoby",
-    budgetLimit: 4000,
+    budgetLimit: 3000,
     history: {
       title: "Tło: Magia Stambułu",
       content: "<p>Stambuł to fascynujące miasto położone na dwóch kontynentach – Europie i Azji, rozdzielone Cieśniną Bosfor. To miejsce, gdzie spotykają się różne kultury, religie i tradycje. W jednym momencie słyszysz śpiew muezzina, a w drugim tętniącą życiem ulicę handlową.</p><p>Miasto ma niesamowitą historię – było stolicą trzech wielkich imperiów: Rzymskiego, Bizantyjskiego i Osmańskiego. Dziś to dynamiczna metropolia słynąca z wyśmienitego jedzenia, bazarów pełnych przypraw i niesamowitej gościnności mieszkańców.</p>"
@@ -90,7 +90,7 @@ window.TRIP_DATA = {
         { time: "16:50", type: "transport", text: "Wylot z GDN (LOT LO 2301)" },
         { time: "20:35", type: "transport", text: "Lądowanie w IST" },
         { time: "22:00", type: "activity", text: "Zameldowanie w Hotel Devman (Asmalimescit Cad No 22)", icon: "🏨", highlight: true },
-        { time: "22:30", type: "meal", text: "Wieczorne wyjście: Robin of Sherwood bar (Kuloğlu, Sadri Alışık Sk. No:19 D:2A)", icon: "🍻", highlight: true }
+        { time: "22:30", type: "meal", text: "Wieczorne wyjście: szybki lahmacun do ręki i zimne piwo w Robin of Sherwood bar (Kuloğlu, Sadri Alışık Sk. No:19 D:2A)", icon: "🍻", highlight: true }
       ]
     },
     "2026-07-25": {
@@ -99,7 +99,7 @@ window.TRIP_DATA = {
       details: "Zwiedzanie najważniejszych zabytków Stambułu w dzielnicy Sultanahmet.",
       transport: "Tramwaj T1 z Karaköy / Kabataş do Sultanahmet.",
       events: [
-        { time: "09:00", type: "meal", text: "Śniadanie (opcjonalnie: dach Seven Hills Restaurant by nakarmić mewy!)", icon: "🐦", highlight: true },
+        { time: "09:00", type: "meal", text: "Śniadanie w hotelu (opcjonalnie kawa na dachu Seven Hills Restaurant by nakarmić mewy)", icon: "☕", highlight: true },
         { time: "10:30", type: "activity", text: "<a href='https://www.guruwalk.com/walks/32639-istanbul-old-city-tour-byzantine-and-ottoman-tales' target='_blank' style='color:inherit; text-decoration:underline;'>Free Walking Tour: Byzantine & Ottoman Tales ↗</a>", icon: "🚶", highlight: true },
         { time: "13:30", type: "activity", text: "Zakończenie wycieczki (Hagia Sophia - opcjonalnie wejście do środka)", icon: "🕌" },
         { time: "14:00", type: "meal", text: "Obiad: Tradycyjny Kebab / Köfte", icon: "🥙" },
@@ -114,7 +114,7 @@ window.TRIP_DATA = {
       details: "Dzień zakupów, degustacji i relaksu na wodzie.",
       transport: "Pieszo, promy.",
       events: [
-        { time: "08:30", type: "meal", text: "Śniadanie (Simit): Cihangir Tarihi Simit Fırını (Türkgücü Cd. 59/A)", icon: "🥨", highlight: true },
+        { time: "08:30", type: "meal", text: "Śniadanie w hotelu + świeży simit na drogę (Cihangir Tarihi Simit Fırını, Türkgücü Cd. 59/A)", icon: "🥨", highlight: true },
         { time: "09:30", type: "activity", text: "Kryty Bazar (Kapalı Çarşı) - Zakupy i negocjacje", icon: "🛍️", highlight: true },
         { time: "12:30", type: "activity", text: "Bazar Egipski (Mısır Çarşısı) - Przyprawy i słodycze", icon: "🌶️", highlight: true },
         { time: "14:00", type: "meal", text: "Balık Ekmek (kanapka z rybą) przy moście Galata / Eminönü", icon: "🐟", highlight: true },
@@ -131,7 +131,7 @@ window.TRIP_DATA = {
       details: "Wymeldowanie z hotelu, ostatnie zakupy i wylot wieczorem.",
       transport: "Metro lub Havaist na lotnisko IST ok. 18:00.",
       events: [
-        { time: "09:30", type: "meal", text: "Śniadanie", icon: "🥐" },
+        { time: "09:30", type: "meal", text: "Ostatnie śniadanie w hotelu", icon: "🥐" },
         { time: "11:30", type: "activity", text: "Wymeldowanie z Hotel Devman", icon: "🚪", highlight: true },
         { time: "12:00", type: "activity", text: "Czas wolny, ew. Wieża Galata", icon: "🗼" },
         { time: "18:00", type: "transport", text: "Przejazd na lotnisko IST" },
@@ -185,8 +185,8 @@ window.TRIP_DATA = {
   costMatrix: [
     { label: "Loty (LOT)", amount: 996, currency: "PLN", type: "fixed", note: "Opłacone (498 zł x 2 os.)" },
     { label: "Hotel Devman", amount: 684, currency: "PLN", type: "fixed", note: "Opłacone (159 EUR x ~4.3 PLN)" },
-    { label: "Wyżywienie", amount: 1100, currency: "PLN", type: "variable", note: "Lokalne jedzenie (ok. 183 zł/os/dzień)" },
-    { label: "Atrakcje i Transport", amount: 700, currency: "PLN", type: "variable", note: "Metro, promy, wstępy" },
-    { label: "Kieszonkowe / Zakupy", amount: 520, currency: "PLN", type: "variable", note: "Bazar, przyprawy, pamiątki" }
+    { label: "Wyżywienie", amount: 600, currency: "PLN", type: "variable", note: "Szybkie lokalne przekąski i obiady (śniadania w hotelu)" },
+    { label: "Atrakcje i Transport", amount: 400, currency: "PLN", type: "variable", note: "Metro, promy, karty wstępu" },
+    { label: "Kieszonkowe / Zakupy", amount: 320, currency: "PLN", type: "variable", note: "Bazar, przyprawy, pamiątki" }
   ]
 };
